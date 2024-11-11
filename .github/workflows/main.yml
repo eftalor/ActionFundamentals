@@ -18,9 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - run: echo '{{github.event_name}}';
-      - run: echo '{{github.branch_name}}';
-
+      - run:
+          echo '{{github.event_name}}';
+          echo '{{github.branch_name}}'
       - uses: actions/checkout@v2
-
       - run: tree
