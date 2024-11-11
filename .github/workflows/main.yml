@@ -20,4 +20,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-  
+
+      - name: event trigger name:
+        run: echo "Triggered by event: ${{ github.event_name }}"
+
+      - name: working on branch:
+        run: echo "Current branch: ${{ github.ref_name }}"
+
+      - name: files: 
+        run: ls -R
